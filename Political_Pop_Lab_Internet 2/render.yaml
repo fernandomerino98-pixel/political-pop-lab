@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: political-pop-lab
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"

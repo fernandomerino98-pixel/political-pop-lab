@@ -1,0 +1,546 @@
+[
+  {
+    "id": 1,
+    "name": "Marcianeke",
+    "category": "Música urbana chilena",
+    "image": "/portraits/1-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://co.pinterest.com/pin/marcianeke--970173944700498219/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://co.pinterest.com/pin/marcianeke--970173944700498219/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 2,
+    "name": "Kidd Voodoo",
+    "category": "Música urbana chilena",
+    "image": "/portraits/2.jpg",
+    "credit": {
+      "author": "Kalai Ramu",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kidd_Voodoo_at_the_2026_Montreux_Jazz_Festival_01.jpg",
+      "file": "File:Kidd Voodoo at the 2026 Montreux Jazz Festival 01.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Jere Klein",
+    "category": "Música urbana chilena",
+    "image": "/portraits/3.jpg",
+    "credit": {
+      "author": "Autor indicado en la fuente",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jere_Klein_en_el_Cosquin_Rock_2024_-_mg4273.jpg",
+      "file": "File:Jere Klein en el Cosquin Rock 2024 - mg4273.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "name": "FloyyMenor",
+    "category": "Música urbana chilena",
+    "image": "/portraits/4.jpg",
+    "credit": {
+      "author": "Mega 97.9 NYC",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:FloyyMenor_(2024)_(cropped).png",
+      "file": "File:FloyyMenor (2024) (cropped).png"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Pablo Chill-E",
+    "category": "Música urbana chilena",
+    "image": "/portraits/5-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://cl.pinterest.com/pin/572168327685593436/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://cl.pinterest.com/pin/572168327685593436/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mon Laferte",
+    "category": "Música chilena",
+    "image": "/portraits/6.jpg",
+    "credit": {
+      "author": "Secretaría de Cultura Ciudad de México from México",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MX_KG_MON_LAFERTE_(49635605121).jpg",
+      "file": "File:MX KG MON LAFERTE (49635605121).jpg"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Ana Tijoux",
+    "category": "Música chilena",
+    "image": "/portraits/7.jpg",
+    "credit": {
+      "author": "Secretaría de Cultura Ciudad de México from México",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MX_MR_ANA_TIJOUX_(49632403173).jpg",
+      "file": "File:MX MR ANA TIJOUX (49632403173).jpg"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Karina (aespa)",
+    "category": "K-pop",
+    "image": "/portraits/8.jpg",
+    "credit": {
+      "author": "티비텐",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aespa_Karina_%EC%B9%B4%EB%A6%AC%EB%82%98_20240618_04_(cropped).png",
+      "file": "File:Aespa Karina 카리나 20240618 04 (cropped).png"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Wonyoung (IVE)",
+    "category": "K-pop",
+    "image": "/portraits/9.jpg",
+    "credit": {
+      "author": "TenAsia",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jang_Won-young_at_the_2024_Melon_Music_Awards-2.png",
+      "file": "File:Jang Won-young at the 2024 Melon Music Awards-2.png"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Suga (BTS)",
+    "category": "K-pop",
+    "image": "/portraits/10.jpg",
+    "credit": {
+      "author": "Dispatch",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Min_Yoon-gi_May_2018.jpg",
+      "file": "File:Min Yoon-gi May 2018.jpg"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Bang Chan (Stray Kids)",
+    "category": "K-pop",
+    "image": "/portraits/11.jpg",
+    "credit": {
+      "author": "티비텐",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stray_Kids_Bang_Chan_W_Korea_October_2024.jpg",
+      "file": "File:Stray Kids Bang Chan W Korea October 2024.jpg"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Soyeon (i-dle)",
+    "category": "K-pop",
+    "image": "/portraits/12.jpg",
+    "credit": {
+      "author": "K-POPIT 케이팝잇",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20230905_(G)i-dle%27s_Soyeon_04.png",
+      "file": "File:20230905 (G)i-dle's Soyeon 04.png"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Jennie (BLACKPINK)",
+    "category": "K-pop",
+    "image": "/portraits/13.jpg",
+    "credit": {
+      "author": "티비텐",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blackpink%27s_Jennie_in_Chanel_Coco_Crush,_July_3,_2024_(1).png",
+      "file": "File:Blackpink's Jennie in Chanel Coco Crush, July 3, 2024 (1).png"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Felix (Stray Kids)",
+    "category": "K-pop",
+    "image": "/portraits/14.jpg",
+    "credit": {
+      "author": "K-POPIT 케이팝잇",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20230930_Felix.jpg",
+      "file": "File:20230930 Felix.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Naruto Uzumaki",
+    "category": "Animé",
+    "image": "/portraits/15.png",
+    "credit": {
+      "author": "Autoría y titular indicados en la ficha de origen",
+      "source": "https://en.wikipedia.org/wiki/File:NarutoUzumaki.png",
+      "license": "Consultar derechos y autoría en la fuente · uso educativo interno",
+      "licenseUrl": "https://en.wikipedia.org/wiki/File:NarutoUzumaki.png",
+      "file": "NarutoUzumaki.png",
+      "educationalOnly": true
+    }
+  },
+  {
+    "id": 16,
+    "name": "Sasuke Uchiha",
+    "category": "Animé",
+    "image": "/portraits/16.jpg",
+    "credit": {
+      "author": "Autoría y titular indicados en la ficha de origen",
+      "source": "https://en.wikipedia.org/wiki/File:SasukeKishimoto.jpg",
+      "license": "Consultar derechos y autoría en la fuente · uso educativo interno",
+      "licenseUrl": "https://en.wikipedia.org/wiki/File:SasukeKishimoto.jpg",
+      "file": "SasukeKishimoto.jpg",
+      "educationalOnly": true
+    }
+  },
+  {
+    "id": 17,
+    "name": "Eren Yeager",
+    "category": "Animé",
+    "image": "/portraits/17-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/icon-eren-yeager-em-2025--845058317619794207/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/icon-eren-yeager-em-2025--845058317619794207/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 18,
+    "name": "Light Yagami (Kira)",
+    "category": "Animé",
+    "image": "/portraits/18.jpg",
+    "credit": {
+      "author": "Autoría y titular indicados en la ficha de origen",
+      "source": "https://en.wikipedia.org/wiki/File:Light_from_Death_Note.jpg",
+      "license": "Consultar derechos y autoría en la fuente · uso educativo interno",
+      "licenseUrl": "https://en.wikipedia.org/wiki/File:Light_from_Death_Note.jpg",
+      "file": "Light_from_Death_Note.jpg",
+      "educationalOnly": true
+    }
+  },
+  {
+    "id": 19,
+    "name": "L (Death Note)",
+    "category": "Animé",
+    "image": "/portraits/19.png",
+    "credit": {
+      "author": "Autoría y titular indicados en la ficha de origen",
+      "source": "https://en.wikipedia.org/wiki/File:L_from_Death_Note.png",
+      "license": "Consultar derechos y autoría en la fuente · uso educativo interno",
+      "licenseUrl": "https://en.wikipedia.org/wiki/File:L_from_Death_Note.png",
+      "file": "L_from_Death_Note.png",
+      "educationalOnly": true
+    }
+  },
+  {
+    "id": 20,
+    "name": "Son Goku",
+    "category": "Animé",
+    "image": "/portraits/20-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/goku-icon-dbs--777504323193960272/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/goku-icon-dbs--777504323193960272/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 21,
+    "name": "Monkey D. Luffy",
+    "category": "Animé",
+    "image": "/portraits/21-pinterest-v3.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/937522847433918453/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/937522847433918453/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 22,
+    "name": "Lelouch Lamperouge",
+    "category": "Animé",
+    "image": "/portraits/22-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://br.pinterest.com/pin/lelouch--983121793627798114/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://br.pinterest.com/pin/lelouch--983121793627798114/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 23,
+    "name": "Gojo Satoru",
+    "category": "Animé",
+    "image": "/portraits/23-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/gojo-satoru-icon-jjk0--699676492133461337/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/gojo-satoru-icon-jjk0--699676492133461337/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 24,
+    "name": "Mikasa Ackerman",
+    "category": "Animé",
+    "image": "/portraits/24-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://ph.pinterest.com/pin/mikasa-icon--1140888518081275186/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://ph.pinterest.com/pin/mikasa-icon--1140888518081275186/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 25,
+    "name": "Lisa Simpson",
+    "category": "Series animadas",
+    "image": "/portraits/25-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://uk.pinterest.com/pin/lisa-simpson--153474299773045863/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://uk.pinterest.com/pin/lisa-simpson--153474299773045863/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 26,
+    "name": "Homero Simpson",
+    "category": "Series animadas",
+    "image": "/portraits/26-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/homero-simpson--4714774595659446/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/homero-simpson--4714774595659446/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 27,
+    "name": "Eric Cartman",
+    "category": "Series animadas",
+    "image": "/portraits/27-pinterest-v3.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://au.pinterest.com/pin/eric-cartman-icon--127578601938630386/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://au.pinterest.com/pin/eric-cartman-icon--127578601938630386/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 28,
+    "name": "Bob Esponja",
+    "category": "Series animadas",
+    "image": "/portraits/28-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/spongebob-cute-icon--404901822754585591/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/spongebob-cute-icon--404901822754585591/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 29,
+    "name": "Homelander",
+    "category": "Series",
+    "image": "/portraits/29-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://br.pinterest.com/pin/homelander-icon--295267319335394352/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://br.pinterest.com/pin/homelander-icon--295267319335394352/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 30,
+    "name": "Walter White",
+    "category": "Series",
+    "image": "/portraits/30-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/974888650591828247/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/974888650591828247/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 31,
+    "name": "Merlina Addams",
+    "category": "Series",
+    "image": "/portraits/31-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/845832373783257656/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/845832373783257656/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 32,
+    "name": "Barbie",
+    "category": "Cine",
+    "image": "/portraits/32-pinterest-v3.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/barbie-icon--84794405478307262/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/barbie-icon--84794405478307262/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 33,
+    "name": "Katniss Everdeen",
+    "category": "Cine",
+    "image": "/portraits/33-pinterest-v3.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/katniss-everdeen--161918549088798155/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/katniss-everdeen--161918549088798155/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 34,
+    "name": "Hermione Granger",
+    "category": "Cine",
+    "image": "/portraits/34-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://www.pinterest.com/pin/1005428685544445474/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://www.pinterest.com/pin/1005428685544445474/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 35,
+    "name": "Taylor Swift",
+    "category": "Música internacional",
+    "image": "/portraits/35.jpg",
+    "credit": {
+      "author": "iHeartRadioCA",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_4.png",
+      "file": "File:Taylor Swift at the 2023 MTV Video Music Awards 4.png"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Bad Bunny",
+    "category": "Música internacional",
+    "image": "/portraits/36.jpg",
+    "credit": {
+      "author": "Toglenn",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bad_Bunny_2019_by_Glenn_Francis_(cropped).jpg",
+      "file": "File:Bad Bunny 2019 by Glenn Francis (cropped).jpg"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Lady Gaga",
+    "category": "Música internacional",
+    "image": "/portraits/37.jpg",
+    "credit": {
+      "author": "The White House",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File%3ALady%20Gaga%20at%20the%20White%20House%20in%202023%20%283%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Lady_Gaga_at_the_White_House_in_2023_(3).jpg",
+      "file": "File:Lady Gaga at the White House in 2023 (3).jpg"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Kanye West",
+    "category": "Música internacional",
+    "image": "/portraits/38.jpg",
+    "credit": {
+      "author": "Cosmopolitan UK",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kanye_West_at_the_Met_Gala_in_2019_2.png",
+      "file": "File:Kanye West at the Met Gala in 2019 2.png"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Pedro Pascal",
+    "category": "Cine y televisión",
+    "image": "/portraits/39-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/portrait-pedro-pascal-in-2024--492862752986245034/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/portrait-pedro-pascal-in-2024--492862752986245034/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  },
+  {
+    "id": 40,
+    "name": "Elon Musk",
+    "category": "Figura pública internacional",
+    "image": "/portraits/40-pinterest.jpg",
+    "credit": {
+      "author": "Autor original no identificado; recopilación en Pinterest",
+      "source": "https://in.pinterest.com/pin/elon-musk--672373419401097172/",
+      "license": "Uso educativo interno · licencia no verificada",
+      "licenseUrl": "https://in.pinterest.com/pin/elon-musk--672373419401097172/",
+      "educationalOnly": true,
+      "originalAuthorUnknown": true
+    }
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "q1",
+    "topic": "Educación",
+    "text": "La educación superior debería ser gratuita para todos.",
+    "direction": -1
+  },
+  {
+    "id": "q2",
+    "topic": "Educación",
+    "text": "El Estado debería financiar más becas para estudiar.",
+    "direction": -1
+  },
+  {
+    "id": "q3",
+    "topic": "Educación",
+    "text": "Cada familia debería pagar la educación superior sin ayuda del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q4",
+    "topic": "Educación",
+    "text": "Las instituciones educativas deberían fijar sus precios con menos límites del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q5",
+    "topic": "Salud",
+    "text": "El Estado debería financiar atención de salud gratuita para todos.",
+    "direction": -1
+  },
+  {
+    "id": "q6",
+    "topic": "Salud",
+    "text": "Los medicamentos básicos deberían tener un precio máximo fijado por el Estado.",
+    "direction": -1
+  },
+  {
+    "id": "q7",
+    "topic": "Salud",
+    "text": "Cada persona debería pagar su atención de salud con menos ayuda del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q8",
+    "topic": "Salud",
+    "text": "Las clínicas deberían fijar sus precios con menos intervención del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q9",
+    "topic": "Economía y trabajo",
+    "text": "Las empresas grandes deberían pagar más impuestos para financiar servicios públicos.",
+    "direction": -1
+  },
+  {
+    "id": "q10",
+    "topic": "Economía y trabajo",
+    "text": "El Estado debería subir el salario mínimo, aunque aumenten los costos de las empresas.",
+    "direction": -1
+  },
+  {
+    "id": "q11",
+    "topic": "Economía y trabajo",
+    "text": "Las empresas deberían pagar menos impuestos para tener más recursos para invertir.",
+    "direction": 1
+  },
+  {
+    "id": "q12",
+    "topic": "Economía y trabajo",
+    "text": "El sueldo debería acordarse entre quien trabaja y la empresa, sin un mínimo fijado por el Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q13",
+    "topic": "Transporte",
+    "text": "El Estado debería financiar un pase de transporte gratuito para estudiantes.",
+    "direction": -1
+  },
+  {
+    "id": "q14",
+    "topic": "Transporte",
+    "text": "El Estado debería aportar más dinero para bajar el precio del transporte público.",
+    "direction": -1
+  },
+  {
+    "id": "q15",
+    "topic": "Transporte",
+    "text": "El transporte público debería financiarse principalmente con lo que paga cada pasajero.",
+    "direction": 1
+  },
+  {
+    "id": "q16",
+    "topic": "Transporte",
+    "text": "Las empresas de transporte deberían fijar sus tarifas con menos límites del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q17",
+    "topic": "Medioambiente",
+    "text": "El Estado debería poner reglas más estrictas a las empresas que contaminan, aunque sus productos cuesten más.",
+    "direction": -1
+  },
+  {
+    "id": "q18",
+    "topic": "Medioambiente",
+    "text": "El Estado debería financiar energías limpias con dinero de los impuestos.",
+    "direction": -1
+  },
+  {
+    "id": "q19",
+    "topic": "Medioambiente",
+    "text": "Las empresas deberían decidir cómo reducir la contaminación con menos reglas del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q20",
+    "topic": "Medioambiente",
+    "text": "Los proyectos de energía limpia deberían financiarse principalmente con inversión privada.",
+    "direction": 1
+  },
+  {
+    "id": "q21",
+    "topic": "Vivienda y servicios",
+    "text": "El Estado debería construir más viviendas para familias que no pueden comprarlas.",
+    "direction": -1
+  },
+  {
+    "id": "q22",
+    "topic": "Vivienda y servicios",
+    "text": "El Estado debería limitar el precio del agua potable.",
+    "direction": -1
+  },
+  {
+    "id": "q23",
+    "topic": "Vivienda y servicios",
+    "text": "Cada familia debería financiar su vivienda con menos ayuda del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q24",
+    "topic": "Vivienda y servicios",
+    "text": "Las empresas deberían fijar los precios de los servicios básicos con menos intervención del Estado.",
+    "direction": 1
+  }
+]
