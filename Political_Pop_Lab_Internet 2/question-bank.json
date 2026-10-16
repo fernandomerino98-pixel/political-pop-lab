@@ -142,5 +142,101 @@
     "topic": "Vivienda y servicios",
     "text": "Las empresas deberían fijar los precios de los servicios básicos con menos intervención del Estado.",
     "direction": 1
+  },
+  {
+    "id": "q25",
+    "topic": "Pensiones",
+    "text": "El Estado debería financiar una pensión mínima para todas las personas mayores.",
+    "direction": -1
+  },
+  {
+    "id": "q26",
+    "topic": "Pensiones",
+    "text": "Quienes tienen ingresos altos deberían aportar más para mejorar las pensiones más bajas.",
+    "direction": -1
+  },
+  {
+    "id": "q27",
+    "topic": "Pensiones",
+    "text": "La pensión debería depender principalmente de lo que cada persona ahorró.",
+    "direction": 1
+  },
+  {
+    "id": "q28",
+    "topic": "Pensiones",
+    "text": "Cada persona debería elegir cómo ahorrar para su pensión con menos reglas del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q29",
+    "topic": "Cultura",
+    "text": "El Estado debería financiar actividades culturales gratuitas en los barrios.",
+    "direction": -1
+  },
+  {
+    "id": "q30",
+    "topic": "Cultura",
+    "text": "Las bibliotecas públicas deberían recibir más recursos, aunque eso requiera más impuestos.",
+    "direction": -1
+  },
+  {
+    "id": "q31",
+    "topic": "Cultura",
+    "text": "Los eventos culturales deberían financiarse principalmente con entradas y aportes privados.",
+    "direction": 1
+  },
+  {
+    "id": "q32",
+    "topic": "Cultura",
+    "text": "Cada museo debería fijar libremente su entrada, aunque algunas personas no puedan pagarla.",
+    "direction": 1
+  },
+  {
+    "id": "q33",
+    "topic": "Deporte",
+    "text": "Las municipalidades deberían ofrecer talleres deportivos gratuitos.",
+    "direction": -1
+  },
+  {
+    "id": "q34",
+    "topic": "Deporte",
+    "text": "El Estado debería construir más canchas públicas, aunque eso requiera más impuestos.",
+    "direction": -1
+  },
+  {
+    "id": "q35",
+    "topic": "Deporte",
+    "text": "Los clubes deportivos deberían mantenerse principalmente con las cuotas de sus integrantes.",
+    "direction": 1
+  },
+  {
+    "id": "q36",
+    "topic": "Deporte",
+    "text": "Las empresas deberían administrar más recintos deportivos, con menos participación del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q37",
+    "topic": "Conectividad",
+    "text": "El Estado debería financiar internet en las zonas donde las empresas no ofrecen servicio.",
+    "direction": -1
+  },
+  {
+    "id": "q38",
+    "topic": "Conectividad",
+    "text": "Debería existir un plan básico de internet financiado por el Estado para quienes no pueden pagarlo.",
+    "direction": -1
+  },
+  {
+    "id": "q39",
+    "topic": "Conectividad",
+    "text": "Cada hogar debería pagar su internet sin ayuda del Estado.",
+    "direction": 1
+  },
+  {
+    "id": "q40",
+    "topic": "Conectividad",
+    "text": "Las empresas de internet deberían fijar sus precios con menos límites del Estado.",
+    "direction": 1
   }
 ]

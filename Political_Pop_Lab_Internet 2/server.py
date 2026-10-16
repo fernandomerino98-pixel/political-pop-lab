@@ -2,7 +2,7 @@ import json, os, time, secrets, threading, io, math
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 from pathlib import Path
-import bots, legislation
+import bots, legislation, closing
 ROOT=Path(__file__).parent
 LOCK=threading.RLock(); SESSIONS={}
 PHASES=['lobby','round1','count1','round2','count2','vote','results']
@@ -14,19 +14,19 @@ def select_questions():
  used={tuple(ids) for ids in history};rng=secrets.SystemRandom()
  topics=list(dict.fromkeys(q['topic'] for q in QUESTION_BANK))
  for attempt in range(10000):
-  directions=[-1]*3+[1]*3;rng.shuffle(directions)
+  directions=[-1]*5+[1]*5;rng.shuffle(directions)
   chosen=[rng.choice([q for q in QUESTION_BANK if q['topic']==t and q['direction']==d]) for t,d in zip(topics,directions)]
   rng.shuffle(chosen);ids=tuple(q['id'] for q in chosen)
   if ids not in used:
    history.append(list(ids));temporary=HISTORY_PATH.with_suffix('.tmp');temporary.write_text(json.dumps(history));temporary.replace(HISTORY_PATH);return chosen
  raise ValueError('No se pudo seleccionar una secuencia nueva. Revisa el historial del banco.')
 def position(p,n,questions):
- a=p['answers'][:n]; vals=[v*questions[i]['direction'] for i,v in enumerate(a) if v is not None and v!=0]
- return round(3*sum(vals)/len(vals),2) if vals else None
+ a=p['answers'][:n]; vals=[v*questions[i]['direction'] for i,v in enumerate(a) if v is not None and v!=9]
+ return round(1.5*sum(vals)/len(vals),2) if vals else None
 
 def snapshot(s, pid=None, host=False):
- ps=list(s['people'].values()); n=3 if s['phase'] in ['lobby','round1','count1','round2'] else 6
- out={'code':s['code'],'phase':s['phase'],'count':len(ps),'majority':len(ps)//2+1 if ps else 0,'ready':sum(all(v is not None for v in p['answers'][:(3 if s['phase'] in ['round1','count1'] else 6)]) for p in ps),'questions':[q['text'] for q in s['questions']],'questionDetails':s['questions'],'avatars':AVATARS,'law':s['law'],'revision':s['revision'],'announcedAt':s.get('announcedAt',0)}
+ ps=list(s['people'].values()); n=5 if s['phase'] in ['lobby','round1','count1','round2'] else 10
+ out={'code':s['code'],'phase':s['phase'],'count':len(ps),'majority':len(ps)//2+1 if ps else 0,'ready':sum(all(v is not None for v in p['answers'][:(5 if s['phase'] in ['round1','count1'] else 10)]) for p in ps),'questions':[q['text'] for q in s['questions']],'questionDetails':s['questions'],'avatars':AVATARS,'law':s['law'],'revision':s['revision'],'announcedAt':s.get('announcedAt',0)}
  out['seats']=[{'number':i+1,'avatar':p['avatar'],'position':position(p,n,s['questions']) if s['phase'] not in ['lobby','round1'] else None} for i,p in enumerate(ps)]
  votes=[p['vote'] for p in ps]; out['votes']={v:votes.count(v) for v in ['yes','no','abstain']};out['voted']=sum(v is not None for v in votes)
  if host and s.get('bots'):out['simulation']={k:v for k,v in s['bots'].items() if k not in ['tokens','lastTick','phaseSince']};out['simulation']['count']=len(s['bots']['tokens'])
@@ -34,9 +34,11 @@ def snapshot(s, pid=None, host=False):
  if host and s['phase'] in ['negotiation','results']:
   out['blocVotes']={k:{'yes':0,'no':0,'abstain':0,'pending':0} for k in ['left','center','right','unknown']}
   for p in ps:
-   score=position(p,6,s['questions']);key='unknown' if score is None else 'left' if score<-.7 else 'right' if score>.7 else 'center'
+   score=position(p,10,s['questions']);key='unknown' if score is None else 'left' if score<-.7 else 'right' if score>.7 else 'center'
    out['blocVotes'][key][p['vote'] or 'pending']+=1
- if pid in s['people']: out['mySeat']=list(s['people']).index(pid)+1;out['me']={**s['people'][pid],'final':position(s['people'][pid],6,s['questions']),'provisional':position(s['people'][pid],3,s['questions'])}
+ if pid in s['people']: out['mySeat']=list(s['people']).index(pid)+1;out['me']={**s['people'][pid],'final':position(s['people'][pid],10,s['questions']),'provisional':position(s['people'][pid],5,s['questions'])}
+ out['closing']=closing.summary(s)
+ out['crisis']={k:v for k,v in s.get('crisis',{}).items() if k!='savedVotes'}
  out['mixed']=s.get('mixed',False)
  out['humans']=sum(not k.startswith('bot-') for k in s['people']);out['botCount']=len(ps)-out['humans']
  if host:out['viewToken']=s.get('view')
@@ -56,7 +58,12 @@ class Handler(BaseHTTPRequestHandler):
     if not s or time.time()-s['created']>14400:return self.send({'error':'Sesión no disponible. Pide un nuevo código.'},404)
     token=q.get('token',[''])[0]
     if token!=s['host'] and token!=s.get('view') and token not in s['people']:return self.send({'error':'Acceso no válido.'},403)
-    return self.send(snapshot(s,token,token==s['host']))
+    result=snapshot(s,token,token==s['host'])
+    if token==s.get('view'):
+     # Projection carries no avatar names or participant seat identifiers.
+     scores=sorted((seat['position'] for seat in result['seats']),key=lambda v:(v is None,v or 0))
+     result['seats']=[{'number':i+1,'position':score} for i,score in enumerate(scores)]
+    return self.send(result)
   if u.path=='/qr.svg':
    try:
     import qrcode, qrcode.image.svg
@@ -66,7 +73,7 @@ class Handler(BaseHTTPRequestHandler):
    except Exception:return self.send(b'QR no disponible: usa el enlace y el codigo.',503,'text/plain')
   f=ROOT/'public'/('index.html' if u.path=='/' else u.path.lstrip('/'))
   if (ROOT/'public').resolve() not in f.resolve().parents or not f.is_file():return self.send({'error':'No encontrado'},404)
-  return self.send(f.read_bytes(),kind={'html':'text/html','js':'text/javascript','css':'text/css','png':'image/png','jpg':'image/jpeg','webp':'image/webp','json':'application/json'}.get(f.suffix[1:],'text/plain'))
+  return self.send(f.read_bytes(),kind={'html':'text/html','js':'text/javascript','css':'text/css','png':'image/png','jpg':'image/jpeg','webp':'image/webp','m4a':'audio/mp4','json':'application/json'}.get(f.suffix[1:],'text/plain'))
  def do_POST(self):
   try:
    size=int(self.headers.get('Content-Length',0))
@@ -92,8 +99,10 @@ class Handler(BaseHTTPRequestHandler):
      if len(s['people'])>=300:raise ValueError('Sesión completa')
      avatar=d.get('avatar');initial=d.get('initial')
      if avatar not in AVATARS or (initial is not None and (type(initial) not in (int,float) or not math.isfinite(initial) or not -3<=initial<=3)):raise ValueError('Selección no válida')
-     token=secrets.token_urlsafe(24);s['people'][token]={'avatar':avatar,'initial':initial,'answers':[None]*6,'vote':None};s['revision']+=1
+     token=secrets.token_urlsafe(24);s['people'][token]={'avatar':avatar,'initial':initial,'answers':[None]*10,'vote':None};s['revision']+=1
      return self.send({'token':token,'code':s['code']})
+    if action=='/api/closing':
+     closing.act(s,token,d.get('command'),d.get('choice'));s['revision']+=1;return self.send({'ok':True})
     if action=='/api/amend':
      if token!=s['host']:return self.send({'error':'Solo el anfitrión modifica el proyecto'},403)
      legislation.amend(s,d.get('option'));s['revision']+=1;return self.send({'ok':True})
@@ -110,6 +119,9 @@ class Handler(BaseHTTPRequestHandler):
       s['bots']['running']=False;bots.step(s,True)
      else:raise ValueError('Acción de simulación no válida')
      s['revision']+=1;return self.send({'ok':True})
+    if action=='/api/crisis':
+     if token!=s['host']:raise ValueError('Solo el anfitrión controla la emergencia')
+     legislation.crisis_action(s,d.get('command'));s['revision']+=1;return self.send({'ok':True})
     if action=='/api/host':
      if token!=s['host']:return self.send({'error':'Solo el anfitrión puede controlar la sesión'},403)
      cmd=d.get('command')
@@ -127,21 +139,21 @@ class Handler(BaseHTTPRequestHandler):
      elif cmd=='delete':del SESSIONS[s['code']];return self.send({'deleted':True})
      elif cmd=='demo':
       if s['phase']!='lobby':raise ValueError('El ensayo se agrega antes de comenzar')
-      for i in range(24):s['people']['demo-'+str(i)]={'avatar':AVATARS[i%len(AVATARS)],'initial':i%7-3,'answers':[[-1,0,1][(i+j*2)%3] for j in range(6)],'vote':['yes','no','abstain'][i%3]}
+      for i in range(24):s['people']['demo-'+str(i)]={'avatar':AVATARS[i%len(AVATARS)],'initial':i%7-3,'answers':[[-1,0,1][(i+j*2)%3] for j in range(10)],'vote':['yes','no','abstain'][i%3]}
      else:raise ValueError('Acción no válida')
     elif action=='/api/answer':
      if not p:raise ValueError('Acceso no válido')
-     start=0 if s['phase']=='round1' else 3 if s['phase']=='round2' else None
+     start=0 if s['phase']=='round1' else 5 if s['phase']=='round2' else None
      a=d.get('answers')
-     if start is None or not isinstance(a,list) or len(a)!=3 or any(type(v)!=int or v not in [-1,0,1] for v in a):raise ValueError('La ronda no está abierta o faltan respuestas')
-     p['answers'][start:start+3]=a
+     if start is None or not isinstance(a,list) or len(a)!=5 or any(type(v)!=int or v not in [-2,-1,0,1,2,9] for v in a):raise ValueError('La ronda no está abierta o faltan respuestas')
+     p['answers'][start:start+5]=a
     elif action=='/api/reflection':
      revised=d.get('revisedInitial')
      if not p or s['phase']!='results':raise ValueError('La reflexión se abre al terminar la actividad')
      if revised is not None and (type(revised) not in (int,float) or not math.isfinite(revised) or not -3<=revised<=3):raise ValueError('Posición no válida')
      p['revisedInitial']=revised;p['reflectionSaved']=True
     elif action=='/api/vote':
-     if not p or s['phase'] not in ['vote','vote2'] or d.get('vote') not in ['yes','no','abstain']:raise ValueError('Votación no disponible')
+     if not p or s['phase'] not in ['vote','vote2','crisisvote'] or d.get('vote') not in ['yes','no','abstain']:raise ValueError('Votación no disponible')
      p['vote']=d['vote']
      if s['people'] and all(x['vote'] is not None for x in s['people'].values()):
       legislation.close(s)
